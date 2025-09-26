@@ -6,46 +6,46 @@ using namespace std;
 int main()
 {
 	int N;
-	double S;
+	double S; //сума
 
-	double C;
-
-	cout << "N (> 0) = "; cin >> N;
-
-	S = 0;
-	int k = 1;
-	while ( k <= N)
-	{
-		C = pow((2.0 * k + 1.0), 2);
-		S += 1.0 / C;
-		++k;
-
-	}
-	cout << S << endl;
-
-	k = 1;
-	S = 0;
 	do {
-		C = pow((2.0 * k + 1.0), 2);
-		S += 1.0 / C;
-		++k;
-	} while (k <= N);
-	cout << S << endl;
+		cout << "N ( > 0 ) = "; cin >> N;
+	} while (N <= 0);
+
+
+	{
+		S = 0;
+		int k = 1;
+		while (k <= N)
+		{
+			S += 1.0 / pow((2.0 * k + 1.0), 2);
+			++k;
+
+		}
+		cout << S << endl;
+	}
+
+	{
+		S = 0;
+		int k = 1;
+		do {
+			S += 1.0 / pow((2.0 * k + 1.0), 2);
+			++k;
+		} while (k <= N);
+		cout << S << endl;
+	}
 
 	S = 0;
 	for (int k = 1; k <= N; k++) {
 
-		C = pow((2.0 * k + 1.0), 2);
-		S += 1.0 / C;
-
+		S += 1.0 / pow((2.0 * k + 1.0), 2);
 	}
 	cout << S << endl;
 
 	S = 0;
 	for (int k = N; k >=1; k--) {
 
-		C = pow((2.0 * k + 1.0), 2);
-		S += 1.0 / C;
+		S += 1.0 / pow((2.0 * k + 1.0), 2);
 
 	}
 	cout << S << endl;
